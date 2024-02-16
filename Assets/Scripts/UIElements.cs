@@ -14,6 +14,7 @@ public class UIElements : MonoBehaviour
 
     private int maxHealth = 100;
     private int health;
+    // Ammo would be determined by the weapon the player is using
     private int maxAmmo = 10;
     private int currentAmmo;
     private int money = 0;
@@ -35,6 +36,7 @@ public class UIElements : MonoBehaviour
         ammoText.text = $"Ammo: {currentAmmo}";
         moneyText.text = $"Money: {money}";
 
+        // Checks if the player has a gun equipped - if false, no image is displayed, if true, the equipped gun's image is displayed
         if (!hasGun)
         {
             gunImage.SetActive(false);
@@ -43,6 +45,13 @@ public class UIElements : MonoBehaviour
         {
             gunImage.SetActive(true);
         }
+
+        /* 
+         * Will need to decrease current ammo when player shoots
+         * Will need to increase current ammo to max ammo when player reloads
+         * Will need to make sure current ammo stops decreasing when at zero
+         */
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -51,7 +60,7 @@ public class UIElements : MonoBehaviour
         if (collision.gameObject.CompareTag("Money"))
         {
             // Increases money variable by a random value
-            money += Random.Range(5, 9);
+            money += Random.Range(5, 11);
         }
     }
 
