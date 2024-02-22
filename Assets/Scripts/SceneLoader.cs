@@ -18,4 +18,11 @@ public class SceneLoader : MonoBehaviour
         // Loads a scene as specified when the function gets called
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void Quit()
+    {
+        // Quits the game, but won't quit in the editor, so a Debug.Log statement is made
+        Debug.Log("Quitting game");
+        Application.Quit();
+    }
 }

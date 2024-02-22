@@ -61,15 +61,19 @@ public class UIElements : MonoBehaviour
         {
             // Increases money variable by a random value
             money += Random.Range(5, 11);
+            Destroy(collision.gameObject);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Checks if the player collided with an enemy or was hit by a bullet
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            health -= maxHealth / 5;
+            if (health > 0)
+            {
+                health -= maxHealth / 5;
+            }
         }
     }
 }
