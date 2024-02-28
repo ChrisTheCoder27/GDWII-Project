@@ -46,11 +46,18 @@ public class UIElements : MonoBehaviour
             gunImage.SetActive(true);
         }
 
-        /* 
-         * Will need to decrease current ammo when player shoots
-         * Will need to increase current ammo to max ammo when player reloads
-         * Will need to make sure current ammo stops decreasing when at zero
-         */
+        if (Input.GetButtonDown("Fire1") && PauseMenu.gameIsPaused == false)
+        {
+            if (currentAmmo > 0)
+            {
+                currentAmmo--;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && PauseMenu.gameIsPaused == false)
+        {
+            currentAmmo = maxAmmo;
+        }
 
     }
 
