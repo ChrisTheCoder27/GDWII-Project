@@ -34,7 +34,7 @@ public class UIElements : MonoBehaviour
     {
         healthText.text = $"Health: {health}%";
         ammoText.text = $"Ammo: {currentAmmo}";
-        moneyText.text = $"Money: {money}";
+        moneyText.text = $"Money: ${money}";
 
         // Checks if the player has a gun equipped - if false, no image is displayed, if true, the equipped gun's image is displayed
         if (!hasGun)
