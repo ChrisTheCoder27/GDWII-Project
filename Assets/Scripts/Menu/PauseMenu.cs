@@ -7,9 +7,9 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
 
-    public GameObject pauseMenuUI;
+    [SerializeField] private GameObject pauseMenuUI;
 
-    public int menuIndex;
+    [SerializeField] private int menuIndex;
 
     void Update()
     {
