@@ -6,6 +6,7 @@ public class EnemyPatrol : MonoBehaviour
 {
     public GameObject pointA;
     public GameObject pointB;
+    GameObject player;
     private Rigidbody2D rb;
     private Transform currentPoint;
     public float speed;
@@ -16,17 +17,24 @@ public class EnemyPatrol : MonoBehaviour
         currentPoint = pointB.transform;
     }
 
+    private void Awake()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
+
     // Update is called once per frame
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
         if (currentPoint == pointB.transform)
         {
-            rb.velocity = new Vector2(speed, 0);
+            transform.position += Vector3.right * Time.deltaTime * speed;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
-            rb.velocity = new Vector2(-speed, 0);
+            transform.position += Vector3.left * Time.deltaTime * speed;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
@@ -36,6 +44,10 @@ public class EnemyPatrol : MonoBehaviour
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
             currentPoint = pointB.transform;
+        }
+        if (player.transform.position.x <= transform.position.x + 10 && player.transform.position.x >= transform.position.x - 10 && player.transform.position.y <= transform.position.y + 2 && player.transform.position.y >= transform.position.y - 2)
+        {
+            speed = 0;
         }
     }
 }

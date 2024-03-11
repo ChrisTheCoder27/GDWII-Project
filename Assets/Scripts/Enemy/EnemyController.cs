@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyControler : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float health;
     private float healthOld;
