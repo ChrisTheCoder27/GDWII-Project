@@ -34,7 +34,7 @@ public class EnemyShooting : MonoBehaviour
                     {
                         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
                     }
-                    Destroy(bullet, 15);
+                    Destroy(bullet, 5);
                 }
                 lastAttack = Time.time;
             }

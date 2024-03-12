@@ -10,11 +10,15 @@ public class EnemyPatrol : MonoBehaviour
     private Rigidbody2D rb;
     private Transform currentPoint;
     public float speed;
-    // Start is called before the first frame update
+    private float setSpeed;
+
+    private bool playerNear;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
+        setSpeed = speed;
     }
 
     private void Awake()
@@ -22,17 +26,18 @@ public class EnemyPatrol : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
-        if (currentPoint == pointB.transform)
+        if (currentPoint == pointB.transform && !playerNear)
         {
+            speed = setSpeed;
             transform.position += Vector3.right * Time.deltaTime * speed;
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        else
+        if (currentPoint == pointA.transform && !playerNear)
         {
+            speed = setSpeed;
             transform.position += Vector3.left * Time.deltaTime * speed;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
@@ -45,9 +50,15 @@ public class EnemyPatrol : MonoBehaviour
         {
             currentPoint = pointB.transform;
         }
+
         if (player.transform.position.x <= transform.position.x + 10 && player.transform.position.x >= transform.position.x - 10 && player.transform.position.y <= transform.position.y + 2 && player.transform.position.y >= transform.position.y - 2)
         {
+            playerNear = true;
             speed = 0;
+        }
+        else
+        {
+            playerNear = false;
         }
     }
 }
