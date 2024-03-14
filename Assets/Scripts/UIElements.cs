@@ -69,6 +69,7 @@ public class UIElements : MonoBehaviour
             // Increases money variable by a random value
             money += Random.Range(5, 11);
             Destroy(collision.gameObject);
+            Money.moneyTotal = money;
         }
     }
 
