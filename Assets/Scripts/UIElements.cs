@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class UIElements : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI healthText;
     [SerializeField] TextMeshProUGUI ammoText;
     [SerializeField] TextMeshProUGUI moneyText;
+
+    [SerializeField] GameObject canvasUI;
+    [SerializeField] GameObject storeMenu;
 
     [SerializeField] GameObject gunImage;
     public bool hasGun;
@@ -71,11 +75,28 @@ public class UIElements : MonoBehaviour
             Destroy(collision.gameObject);
             Money.moneyTotal = money;
         }
+
+        // Checks if the player got hit by a bullet
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            if (health > 0)
+            {
+                health -= maxHealth / 10;
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            /*
+            canvasUI.SetActive(false);
+            storeMenu.SetActive(true);
+            */
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Checks if the player collided with an enemy or was hit by a bullet
+        // Checks if the player collided with an enemy
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (health > 0)
@@ -84,4 +105,5 @@ public class UIElements : MonoBehaviour
             }
         }
     }
+
 }
