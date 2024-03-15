@@ -13,6 +13,14 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    public bool IsFacingRight 
+    { 
+        get 
+        {
+            return isFacingRight;
+        } 
+    }
+
     void Update()
     {
         if (PauseMenu.gameIsPaused == false)

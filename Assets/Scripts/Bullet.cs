@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
     public Rigidbody2D rb;
 
+    public GameObject moneyPrefab;
+
     void Start()
     {
         rb.velocity = transform.right * bulletSpeed;
@@ -22,6 +24,10 @@ public class Bullet : MonoBehaviour
         {
             other.gameObject.GetComponent<EnemyController>().health -= damage;
             Destroy(gameObject);
+            if (other.gameObject.GetComponent<EnemyController>().health <= 0)
+            {
+                Instantiate(moneyPrefab, other.transform.position, Quaternion.identity);
+            }
         }
         
     }
