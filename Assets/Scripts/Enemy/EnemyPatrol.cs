@@ -55,6 +55,14 @@ public class EnemyPatrol : MonoBehaviour
         {
             playerNear = true;
             speed = 0;
+            if (player.transform.position.x <= transform.position.x + 10)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0); 
+            }
+            if (player.transform.position.x >= transform.position.x - 10)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
         else
         {

@@ -15,8 +15,7 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * bulletSpeed;
     }
 
-    // Basic idea of how the  damage taking will occur later on down there 
-
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -28,7 +27,7 @@ public class Bullet : MonoBehaviour
             {
                 Instantiate(moneyPrefab, other.transform.position, Quaternion.identity);
             }
+            Destroy(gameObject, 5);
         }
-        
     }
 }

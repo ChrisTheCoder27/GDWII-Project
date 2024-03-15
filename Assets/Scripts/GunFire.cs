@@ -7,18 +7,136 @@ public class GunFire : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject bulletSniperPrefab;
+    public GameObject rifleRoundsPrefab;
+    public GameObject shotgunRoundPrefab;
+    bool pistolMode;
+    bool pistolModeEnabled;
+    bool sniperMode;
+    bool sniperModeEnabled;
+    bool rifleMode;
+    bool rifleModeEnabled;
+    bool shotgunMode;
+    bool shotgunModeEnabled;
+
+
+    void Start()
+    {
+        SwitchToPistol();
+    }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && PauseMenu.gameIsPaused == false)
+        if (Input.GetKeyDown(KeyCode.Keypad4))
         {
-            Shoot();
+            SwitchToSniper();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            SwitchToRifle();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            SwitchToShotgun();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            SwitchToPistol();
+        }
+
+        if (Input.GetButtonDown("Fire1") && pistolMode && pistolModeEnabled)
+        {
+            ShootPistol();
+        }
+
+        if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled)
+        {
+            ShootSniper();
+        }
+
+        if (Input.GetButtonDown("Fire1") && rifleMode && rifleModeEnabled)
+        {
+            ShootRifle();
+        }
+
+        if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled)
+        {
+            ShotgunBlast();
         }
     }
 
-    void Shoot()
+    void ShootPistol()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Destroy(bullet, 5);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void ShootSniper()
+    {
+        Instantiate(bulletSniperPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void ShootRifle()
+    {
+        Instantiate(rifleRoundsPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void ShotgunBlast()
+    {
+        Instantiate(shotgunRoundPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void SwitchToSniper()
+    {
+        pistolMode = false;
+        pistolModeEnabled = false;
+        sniperMode = false;
+        rifleMode = false;
+        rifleModeEnabled = false;
+        sniperModeEnabled = false;
+        sniperMode = true;
+        sniperModeEnabled = true;
+        Debug.Log("Switching to Sniper!");
+    }
+
+    void SwitchToRifle()
+    {
+        sniperMode = false;
+        sniperModeEnabled = false;
+        shotgunMode = false;
+        shotgunModeEnabled = false;
+        pistolMode = false;
+        pistolModeEnabled = false;
+        rifleMode = true;
+        rifleModeEnabled = true;
+        Debug.Log("Switching to Rifle!");
+    }
+
+    void SwitchToShotgun()
+    {
+        rifleMode = false;
+        rifleModeEnabled = false;
+        sniperMode = false;
+        sniperModeEnabled = false;
+        pistolMode = false;
+        pistolModeEnabled = false;
+        shotgunMode = true;
+        shotgunModeEnabled = true;
+        Debug.Log("Switching to Shotgun!");
+    }
+
+    void SwitchToPistol()
+    {
+        shotgunMode = false;
+        shotgunModeEnabled = false;
+        rifleMode = false;
+        rifleModeEnabled = false;
+        sniperMode = false;
+        sniperModeEnabled = false;
+        pistolMode = true;
+        pistolModeEnabled = true;
+        Debug.Log("Switching to Pistol!");
     }
 }
