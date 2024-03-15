@@ -19,10 +19,6 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (health != healthOld) 
-        {
-            Debug.Log(health);
-        }
         healthOld = health;
     }
 }

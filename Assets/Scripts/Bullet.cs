@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public int damage;
     public float bulletSpeed;
     public Rigidbody2D rb;
+    GameObject player;
 
     public GameObject moneyPrefab;
 
@@ -27,7 +28,7 @@ public class Bullet : MonoBehaviour
             {
                 Instantiate(moneyPrefab, other.transform.position, Quaternion.identity);
             }
-            Destroy(gameObject, 5);
         }
+        Destroy(gameObject, 5);
     }
 }
