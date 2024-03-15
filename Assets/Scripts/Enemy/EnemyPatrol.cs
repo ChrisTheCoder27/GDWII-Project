@@ -55,14 +55,18 @@ public class EnemyPatrol : MonoBehaviour
         {
             playerNear = true;
             speed = 0;
-            if (player.transform.position.x <= transform.position.x + 10)
+            Vector3 scale = transform.localScale;
+            if (player.transform.position.x < transform.position.x)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0); 
+                scale.x = Mathf.Abs(scale.x)* -1;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            if (player.transform.position.x >= transform.position.x - 10)
+            else
             {
+                scale.x = Mathf.Abs(scale.x);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
+            transform.localScale = scale;
         }
         else
         {
