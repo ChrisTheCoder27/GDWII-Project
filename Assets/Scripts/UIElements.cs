@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class UIElements : MonoBehaviour
 {
@@ -12,9 +11,6 @@ public class UIElements : MonoBehaviour
 
     [SerializeField] GameObject canvasUI;
     [SerializeField] GameObject storeMenu;
-
-    [SerializeField] GameObject gunImage;
-    public bool hasGun;
 
     private int maxHealth = 100;
     private int health;
@@ -39,16 +35,6 @@ public class UIElements : MonoBehaviour
         healthText.text = $"Health: {health}%";
         ammoText.text = $"Ammo: {currentAmmo}";
         moneyText.text = $"Money: ${money}";
-
-        // Checks if the player has a gun equipped - if false, no image is displayed, if true, the equipped gun's image is displayed
-        if (!hasGun)
-        {
-            gunImage.SetActive(false);
-        }
-        else if (hasGun)
-        {
-            gunImage.SetActive(true);
-        }
 
         if (Input.GetButtonDown("Fire1") && PauseMenu.gameIsPaused == false)
         {
