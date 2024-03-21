@@ -10,6 +10,12 @@ public class GunFire : MonoBehaviour
     public GameObject bulletSniperPrefab;
     public GameObject rifleRoundsPrefab;
     public GameObject shotgunRoundPrefab;
+
+    [SerializeField] GameObject pistol;
+    [SerializeField] GameObject assaultRifle;
+    [SerializeField] GameObject shotgun;
+    [SerializeField] GameObject sniper;
+
     bool pistolMode;
     bool pistolModeEnabled;
     bool sniperMode;
@@ -18,7 +24,6 @@ public class GunFire : MonoBehaviour
     bool rifleModeEnabled;
     bool shotgunMode;
     bool shotgunModeEnabled;
-
 
     void Start()
     {
@@ -99,6 +104,11 @@ public class GunFire : MonoBehaviour
         sniperMode = true;
         sniperModeEnabled = true;
         Debug.Log("Switching to Sniper!");
+
+        pistol.gameObject.SetActive(false);
+        assaultRifle.gameObject.SetActive(false);
+        shotgun.gameObject.SetActive(false);
+        sniper.gameObject.SetActive(true);
     }
 
     void SwitchToRifle()
@@ -112,6 +122,11 @@ public class GunFire : MonoBehaviour
         rifleMode = true;
         rifleModeEnabled = true;
         Debug.Log("Switching to Rifle!");
+
+        pistol.gameObject.SetActive(false);
+        assaultRifle.gameObject.SetActive(true);
+        shotgun.gameObject.SetActive(false);
+        sniper.gameObject.SetActive(false);
     }
 
     void SwitchToShotgun()
@@ -125,6 +140,11 @@ public class GunFire : MonoBehaviour
         shotgunMode = true;
         shotgunModeEnabled = true;
         Debug.Log("Switching to Shotgun!");
+
+        pistol.gameObject.SetActive(false);
+        assaultRifle.gameObject.SetActive(false);
+        shotgun.gameObject.SetActive(true);
+        sniper.gameObject.SetActive(false);
     }
 
     void SwitchToPistol()
@@ -138,5 +158,10 @@ public class GunFire : MonoBehaviour
         pistolMode = true;
         pistolModeEnabled = true;
         Debug.Log("Switching to Pistol!");
+
+        pistol.gameObject.SetActive(true);
+        assaultRifle.gameObject.SetActive(false);
+        shotgun.gameObject.SetActive(false);
+        sniper.gameObject.SetActive(false);
     }
 }
