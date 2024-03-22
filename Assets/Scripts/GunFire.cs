@@ -32,44 +32,48 @@ public class GunFire : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad4))
+        if (!PauseMenu.gameIsPaused)
         {
-            SwitchToSniper();
-        }
+            // The number keys at the top of the keyboard switch between the weapons
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                SwitchToSniper();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            SwitchToRifle();
-        }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                SwitchToRifle();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            SwitchToShotgun();
-        }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                SwitchToShotgun();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            SwitchToPistol();
-        }
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                SwitchToPistol();
+            }
 
-        if (Input.GetButtonDown("Fire1") && pistolMode && pistolModeEnabled)
-        {
-            ShootPistol();
-        }
+            if (Input.GetButtonDown("Fire1") && pistolMode && pistolModeEnabled)
+            {
+                ShootPistol();
+            }
 
-        if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled)
-        {
-            ShootSniper();
-        }
+            if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled)
+            {
+                ShootSniper();
+            }
 
-        if (Input.GetButtonDown("Fire1") && rifleMode && rifleModeEnabled)
-        {
-            ShootRifle();
-        }
+            if (Input.GetButtonDown("Fire1") && rifleMode && rifleModeEnabled)
+            {
+                ShootRifle();
+            }
 
-        if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled)
-        {
-            ShotgunBlast();
+            if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled)
+            {
+                ShotgunBlast();
+            }
         }
     }
 

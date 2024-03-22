@@ -24,6 +24,7 @@ public class StoreMenu : MonoBehaviour
         shotgunButton.onClick.AddListener(ClickShotgunButton);
         sniperButton.onClick.AddListener(ClickSniperButton);
 
+        // Checks if the player has already purchased any of the weapons available
         if (rifleOwned)
         {
             rifleButton.interactable = false;
@@ -43,6 +44,7 @@ public class StoreMenu : MonoBehaviour
         }
     }
 
+    // Method when the player tries buying the assault rifle
     void ClickRifleButton()
     {
         if (Money.moneyTotal < riflePrice)
@@ -58,6 +60,7 @@ public class StoreMenu : MonoBehaviour
         }
     }
 
+    // Method when the player tries buying the shotgun
     void ClickShotgunButton()
     {
         if (Money.moneyTotal < shotgunPrice)
@@ -73,6 +76,7 @@ public class StoreMenu : MonoBehaviour
         }
     }
 
+    // Method when the player tries buying the sniper
     void ClickSniperButton()
     {
         if (Money.moneyTotal < sniperPrice)
