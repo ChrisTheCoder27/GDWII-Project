@@ -25,6 +25,38 @@ public class GunFire : MonoBehaviour
     bool shotgunMode;
     bool shotgunModeEnabled;
 
+    public bool PistolMode
+    {
+        get
+        {
+            return pistolMode;
+        }
+    }
+
+    public bool SniperMode
+    {
+        get
+        {
+            return sniperMode;
+        }
+    }
+
+    public bool RifleMode
+    {
+        get
+        {
+            return rifleMode;
+        }
+    }
+
+    public bool ShotgunMode
+    {
+        get
+        {
+            return shotgunMode;
+        }
+    }
+
     void Start()
     {
         SwitchToPistol();

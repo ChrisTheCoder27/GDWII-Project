@@ -11,6 +11,14 @@ public class Money : MonoBehaviour
 
     void Start()
     {
-        currentMoneyText.text = $"Money: {moneyTotal}";
+        currentMoneyText.text = $"Money: ${moneyTotal}";
+    }
+
+    void Update()
+    {
+        if (moneyTotal > 0)
+        {
+            currentMoneyText.text = $"Money: ${moneyTotal}";
+        }
     }
 }

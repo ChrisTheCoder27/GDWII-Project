@@ -11,6 +11,10 @@ public class SceneLoader : MonoBehaviour
     {
         // Loads the next scene in the build index
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        // Unpauses the game and sets the time back to normal
+        PauseMenu.gameIsPaused = false;
+        Time.timeScale = 1f;
     }
 
     public void LoadSpecificScene()

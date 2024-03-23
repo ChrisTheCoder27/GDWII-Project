@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
 
     public GameObject moneyPrefab;
 
+    bool moneyDropped;
+
     void Start()
     {
         rb.velocity = transform.right * bulletSpeed;
@@ -26,9 +28,14 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             if (other.gameObject.GetComponent<EnemyController>().health <= 0)
             {
-                Instantiate(moneyPrefab, other.transform.position, Quaternion.identity);
+                // Ensures that only 1 money drops, even if multiple bullets hit the enemy
+                if (!moneyDropped)
+                {
+                    Instantiate(moneyPrefab, other.transform.position, Quaternion.identity);
+                    moneyDropped = true;
+                }
             }
         }
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 4);
     }
 }

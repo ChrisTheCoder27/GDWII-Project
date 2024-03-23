@@ -5,48 +5,125 @@ using TMPro;
 
 public class UIElements : MonoBehaviour
 {
+    // Variables set in the inspector
     [SerializeField] TextMeshProUGUI healthText;
+    [SerializeField] HealthBar healthBar;
     [SerializeField] TextMeshProUGUI ammoText;
+    [SerializeField] GunFire gunFire;
     [SerializeField] TextMeshProUGUI moneyText;
 
     [SerializeField] GameObject canvasUI;
     [SerializeField] GameObject storeMenu;
 
+    // Health variables
     private int maxHealth = 100;
     private int health;
-    // Ammo would be determined by the weapon the player is using
-    private int maxAmmo = 10;
-    private int currentAmmo;
+
+    // Ammo variables
+    private int maxAmmo = 16;
+    private int currentPistolAmmo;
+    private int currentRifleAmmo;
+    private int currentShotgunAmmo;
+    private int currentSniperAmmo;
+
     private int money = 0;
 
     void Start()
     {
-        // Assigning health and ammo variables at start
+        // Assigning health, ammo, and money variables at start
         health = maxHealth;
-        currentAmmo = maxAmmo;
+        healthBar.SetHealth(maxHealth);
+        currentPistolAmmo = maxAmmo;
+        currentRifleAmmo = 30;
+        currentShotgunAmmo = 12;
+        currentSniperAmmo = 8;
+        money = Money.moneyTotal;
 
         healthText.text = $"Health: {health}%";
-        ammoText.text = $"Ammo: {currentAmmo}";
-        moneyText.text = "Money: 0";
+        ammoText.text = $"Ammo: {currentPistolAmmo}";
+        moneyText.text = $"Money: {money}";
     }
 
     void Update()
     {
-        healthText.text = $"Health: {health}%";
-        ammoText.text = $"Ammo: {currentAmmo}";
-        moneyText.text = $"Money: ${money}";
-
-        if (Input.GetButtonDown("Fire1") && PauseMenu.gameIsPaused == false)
+        if (PauseMenu.gameIsPaused == false)
         {
-            if (currentAmmo > 0)
+            healthText.text = $"Health: {health}%";
+            moneyText.text = $"Money: ${money}";
+
+            if (gunFire.PistolMode)
             {
-                currentAmmo--;
-            }
-        }
+                maxAmmo = 16;
+                ammoText.text = $"Ammo: {currentPistolAmmo}";
 
-        if (Input.GetKeyDown(KeyCode.R) && PauseMenu.gameIsPaused == false)
-        {
-            currentAmmo = maxAmmo;
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if (currentPistolAmmo > 0)
+                    {
+                        currentPistolAmmo--;
+                    }
+                }
+
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    currentPistolAmmo = maxAmmo;
+                }
+            }
+            else if (gunFire.RifleMode)
+            {
+                maxAmmo = 30;
+                ammoText.text = $"Ammo: {currentRifleAmmo}";
+
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if (currentRifleAmmo > 0)
+                    {
+                        currentRifleAmmo--;
+                    }
+                }
+
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    currentRifleAmmo = maxAmmo;
+                }
+            }
+            else if (gunFire.ShotgunMode)
+            {
+                maxAmmo = 12;
+                ammoText.text = $"Ammo: {currentShotgunAmmo}";
+
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if (currentShotgunAmmo > 0)
+                    {
+                        currentShotgunAmmo--;
+                    }
+                }
+
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    currentShotgunAmmo = maxAmmo;
+                }
+            }
+            else if (gunFire.SniperMode)
+            {
+                maxAmmo = 8;
+                ammoText.text = $"Ammo: {currentSniperAmmo}";
+
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if (currentSniperAmmo > 0)
+                    {
+                        currentSniperAmmo--;
+                    }
+                }
+
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    currentSniperAmmo = maxAmmo;
+                }
+            }
+
         }
 
     }
@@ -68,15 +145,17 @@ public class UIElements : MonoBehaviour
             if (health > 0)
             {
                 health -= maxHealth / 10;
+                healthBar.SetHealth(health);
             }
         }
 
+        // Checks if the player reaches the end of a level
         if (collision.gameObject.CompareTag("Finish"))
         {
-            /*
+            PauseMenu.gameIsPaused = true;
+            Time.timeScale = 0f;
             canvasUI.SetActive(false);
             storeMenu.SetActive(true);
-            */
         }
     }
 
@@ -87,7 +166,8 @@ public class UIElements : MonoBehaviour
         {
             if (health > 0)
             {
-                health -= maxHealth / 5;
+                health -= maxHealth / 10;
+                healthBar.SetHealth(health);
             }
         }
     }
