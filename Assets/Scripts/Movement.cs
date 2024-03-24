@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] UIElements uiElements;
+
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 8f;
@@ -31,6 +34,11 @@ public class Movement : MonoBehaviour
 
             Flip();
         }
+
+        if (uiElements.Health <= 0 || transform.position.y < -30)
+        {
+            Die();
+        }
     }
 
     private void FixedUpdate()
@@ -52,5 +60,10 @@ public class Movement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    private void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

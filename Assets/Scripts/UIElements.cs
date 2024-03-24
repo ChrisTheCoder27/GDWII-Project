@@ -28,6 +28,14 @@ public class UIElements : MonoBehaviour
 
     private int money = 0;
 
+    public int Health
+    {
+        get 
+        {
+            return health; 
+        }
+    }
+
     void Start()
     {
         // Assigning health, ammo, and money variables at start
@@ -136,7 +144,21 @@ public class UIElements : MonoBehaviour
             // Increases money variable by a random value
             money += Random.Range(5, 11);
             Destroy(collision.gameObject);
-            Money.moneyTotal = money;
+        }
+
+        // Checks if the player collides with a medkit
+        if (collision.gameObject.CompareTag("Medkit"))
+        {
+            if (health != maxHealth)
+            {
+                health += 50;
+                if (health > maxHealth)
+                {
+                    health = maxHealth;
+                }
+                healthBar.SetHealth(health);
+                Destroy(collision.gameObject);
+            }
         }
 
         // Checks if the player got hit by a bullet
@@ -154,6 +176,7 @@ public class UIElements : MonoBehaviour
         {
             PauseMenu.gameIsPaused = true;
             Time.timeScale = 0f;
+            Money.moneyTotal = money;
             canvasUI.SetActive(false);
             storeMenu.SetActive(true);
         }
