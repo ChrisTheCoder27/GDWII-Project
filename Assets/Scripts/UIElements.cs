@@ -36,6 +36,38 @@ public class UIElements : MonoBehaviour
         }
     }
 
+    public int PistolAmmo
+    {
+        get
+        {
+            return currentPistolAmmo;
+        }
+    }
+
+    public int RifleAmmo
+    {
+        get
+        {
+            return currentRifleAmmo;
+        }
+    }
+
+    public int ShotgunAmmo
+    {
+        get
+        {
+            return currentShotgunAmmo;
+        }
+    }
+
+    public int SniperAmmo
+    {
+        get
+        {
+            return currentSniperAmmo;
+        }
+    }
+
     void Start()
     {
         // Assigning health, ammo, and money variables at start

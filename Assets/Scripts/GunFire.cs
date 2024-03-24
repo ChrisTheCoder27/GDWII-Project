@@ -11,6 +11,8 @@ public class GunFire : MonoBehaviour
     public GameObject rifleRoundsPrefab;
     public GameObject shotgunRoundPrefab;
 
+    [SerializeField] UIElements uiElements;
+
     [SerializeField] GameObject pistol;
     [SerializeField] GameObject assaultRifle;
     [SerializeField] GameObject shotgun;
@@ -89,22 +91,34 @@ public class GunFire : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1") && pistolMode && pistolModeEnabled)
             {
-                ShootPistol();
+                if (uiElements.PistolAmmo > 0)
+                {
+                    ShootPistol();
+                }
             }
 
             if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled)
             {
-                ShootSniper();
+                if (uiElements.SniperAmmo > 0)
+                {
+                    ShootSniper();
+                }
             }
 
             if (Input.GetButtonDown("Fire1") && rifleMode && rifleModeEnabled)
             {
-                ShootRifle();
+                if (uiElements.RifleAmmo > 0)
+                {
+                    ShootRifle();
+                }
             }
 
             if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled)
             {
-                ShotgunBlast();
+                if (uiElements.ShotgunAmmo > 0)
+                {
+                    ShotgunBlast();
+                }
             }
         }
     }
@@ -139,7 +153,6 @@ public class GunFire : MonoBehaviour
         sniperModeEnabled = false;
         sniperMode = true;
         sniperModeEnabled = true;
-        Debug.Log("Switching to Sniper!");
 
         pistol.gameObject.SetActive(false);
         assaultRifle.gameObject.SetActive(false);
@@ -157,7 +170,6 @@ public class GunFire : MonoBehaviour
         pistolModeEnabled = false;
         rifleMode = true;
         rifleModeEnabled = true;
-        Debug.Log("Switching to Rifle!");
 
         pistol.gameObject.SetActive(false);
         assaultRifle.gameObject.SetActive(true);
@@ -175,7 +187,6 @@ public class GunFire : MonoBehaviour
         pistolModeEnabled = false;
         shotgunMode = true;
         shotgunModeEnabled = true;
-        Debug.Log("Switching to Shotgun!");
 
         pistol.gameObject.SetActive(false);
         assaultRifle.gameObject.SetActive(false);
@@ -193,7 +204,6 @@ public class GunFire : MonoBehaviour
         sniperModeEnabled = false;
         pistolMode = true;
         pistolModeEnabled = true;
-        Debug.Log("Switching to Pistol!");
 
         pistol.gameObject.SetActive(true);
         assaultRifle.gameObject.SetActive(false);
