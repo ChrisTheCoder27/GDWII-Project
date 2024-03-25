@@ -33,13 +33,13 @@ public class EnemyPatrol : MonoBehaviour
         {
             speed = setSpeed;
             transform.position += Vector3.right * Time.deltaTime * speed;
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (currentPoint == pointA.transform && !playerNear)
         {
             speed = setSpeed;
             transform.position += Vector3.left * Time.deltaTime * speed;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
