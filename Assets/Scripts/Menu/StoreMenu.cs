@@ -14,6 +14,12 @@ public class StoreMenu : MonoBehaviour
     [SerializeField] Button shotgunButton;
     [SerializeField] Button sniperButton;
 
+    [SerializeField] GameObject purchaseFailedText;
+
+    [SerializeField] Transform riflePos;
+    [SerializeField] Transform shotgunPos;
+    [SerializeField] Transform sniperPos;
+
     [SerializeField] int riflePrice;
     [SerializeField] int shotgunPrice;
     [SerializeField] int sniperPrice;
@@ -49,13 +55,15 @@ public class StoreMenu : MonoBehaviour
     {
         if (Money.moneyTotal < riflePrice)
         {
-            Debug.Log("Purchase failed. Not enough money.");
+            purchaseFailedText.transform.position = riflePos.transform.position;
+            purchaseFailedText.SetActive(true);
         }
         else
         {
             Money.moneyTotal -= riflePrice;
             rifleOwned = true;
             rifleButton.interactable = false;
+            purchaseFailedText.SetActive(false);
             rifleButton.GetComponentInChildren<TMP_Text>().text = "Purchased!";
         }
     }
@@ -65,13 +73,15 @@ public class StoreMenu : MonoBehaviour
     {
         if (Money.moneyTotal < shotgunPrice)
         {
-            Debug.Log("Purchase failed. Not enough money.");
+            purchaseFailedText.transform.position = shotgunPos.transform.position;
+            purchaseFailedText.SetActive(true);
         }
         else
         {
             Money.moneyTotal -= shotgunPrice;
             shotgunOwned = true;
             shotgunButton.interactable = false;
+            purchaseFailedText.SetActive(false);
             shotgunButton.GetComponentInChildren<TMP_Text>().text = "Purchased!";
         }
     }
@@ -81,13 +91,15 @@ public class StoreMenu : MonoBehaviour
     {
         if (Money.moneyTotal < sniperPrice)
         {
-            Debug.Log("Purchase failed. Not enough money.");
+            purchaseFailedText.transform.position = sniperPos.transform.position;
+            purchaseFailedText.SetActive(true);
         }
         else
         {
             Money.moneyTotal -= sniperPrice;
             sniperOwned = true;
             sniperButton.interactable = false;
+            purchaseFailedText.SetActive(false);
             sniperButton.GetComponentInChildren<TMP_Text>().text = "Purchased!";
         }
     }
