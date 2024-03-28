@@ -58,12 +58,10 @@ public class EnemyPatrol : MonoBehaviour
             Vector3 scale = transform.localScale;
             if (player.transform.position.x < transform.position.x)
             {
-                scale.x = Mathf.Abs(scale.x)* -1;
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else
             {
-                scale.x = Mathf.Abs(scale.x);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             transform.localScale = scale;

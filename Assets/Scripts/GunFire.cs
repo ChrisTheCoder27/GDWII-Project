@@ -10,6 +10,7 @@ public class GunFire : MonoBehaviour
     public GameObject bulletSniperPrefab;
     public GameObject rifleRoundsPrefab;
     public GameObject shotgunRoundPrefab;
+    private StoreMenu StoreMenu;
 
     [SerializeField] UIElements uiElements;
 
@@ -71,17 +72,26 @@ public class GunFire : MonoBehaviour
             // The number keys at the top of the keyboard switch between the weapons
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                SwitchToSniper();
+                if (StoreMenu.sniperOwned)
+                {
+                    SwitchToSniper();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                SwitchToRifle();
+                if (StoreMenu.rifleOwned)
+                {
+                    SwitchToRifle();
+                } 
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                SwitchToShotgun();
+                if (StoreMenu.shotgunOwned)
+                {
+                    SwitchToShotgun();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
