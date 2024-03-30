@@ -12,11 +12,6 @@ public class Bullet : MonoBehaviour
     public GameObject moneyPrefab;
 
     bool moneyDropped;
-
-    void Start()
-    {
-        rb.velocity = transform.right * bulletSpeed;
-    }
     
     private void OnTriggerEnter2D(Collider2D other)
     {

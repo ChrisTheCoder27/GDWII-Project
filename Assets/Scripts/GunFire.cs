@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class GunFire : MonoBehaviour
 {
-    public Transform firePoint;
+    public Transform pistolFirePoint;
+    public Transform shotgunFirePoint;
+    public Transform rifleFirePoint;
+    public Transform sniperFirePoint;
     public GameObject bulletPrefab;
     public GameObject bulletSniperPrefab;
     public GameObject rifleRoundsPrefab;
@@ -14,6 +17,7 @@ public class GunFire : MonoBehaviour
 
     [SerializeField] UIElements uiElements;
 
+    [SerializeField] GameObject player;
     [SerializeField] GameObject pistol;
     [SerializeField] GameObject assaultRifle;
     [SerializeField] GameObject shotgun;
@@ -135,22 +139,54 @@ public class GunFire : MonoBehaviour
 
     void ShootPistol()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, pistolFirePoint.position, pistolFirePoint.rotation);
+        if (player.transform.localScale.x > 0)
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+        }
     }
 
     void ShootSniper()
     {
-        Instantiate(bulletSniperPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = Instantiate(bulletSniperPrefab, sniperFirePoint.position, sniperFirePoint.rotation);
+        if (player.transform.localScale.x > 0)
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+        }
     }
 
     void ShootRifle()
     {
-        Instantiate(rifleRoundsPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = Instantiate(rifleRoundsPrefab, rifleFirePoint.position, rifleFirePoint.rotation);
+        if (player.transform.localScale.x > 0)
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+        }
     }
 
     void ShotgunBlast()
     {
-        Instantiate(shotgunRoundPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = Instantiate(shotgunRoundPrefab, shotgunFirePoint.position, shotgunFirePoint.rotation);
+        if (player.transform.localScale.x > 0)
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+        }
     }
 
     void SwitchToSniper()

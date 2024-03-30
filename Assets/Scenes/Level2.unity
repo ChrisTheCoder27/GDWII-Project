@@ -54053,6 +54053,7 @@ MonoBehaviour:
   rifleRoundsPrefab: {fileID: 930686562106166433, guid: 3acaffb171cb23e40bec27c09b096d7e, type: 3}
   shotgunRoundPrefab: {fileID: 6457145805723584795, guid: 59950c5a46c0a5740a3f2d2e1a97fb84, type: 3}
   uiElements: {fileID: 1256501756}
+  player: {fileID: 1256501755}
   pistol: {fileID: 1882811165}
   assaultRifle: {fileID: 524118632}
   shotgun: {fileID: 865531903}
