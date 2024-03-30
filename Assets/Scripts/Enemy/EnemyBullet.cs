@@ -14,7 +14,6 @@ public class EnemyBullet : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-        }
-        
+        } 
     }
 }
