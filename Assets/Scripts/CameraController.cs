@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    private Vector3 offset;
-
-    void Start()
-    {
-        offset = new Vector3 (0, 0, -10);
-    }
+    [SerializeField] GameObject player;
+    [SerializeField] Vector3 offset;
 
     void LateUpdate()
     {
