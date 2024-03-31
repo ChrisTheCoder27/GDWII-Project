@@ -184,10 +184,10 @@ public class GunFire : MonoBehaviour
     {
         pistolMode = false;
         pistolModeEnabled = false;
-        sniperMode = false;
+        shotgunMode = false;
         rifleMode = false;
         rifleModeEnabled = false;
-        sniperModeEnabled = false;
+        shotgunModeEnabled = false;
         sniperMode = true;
         sniperModeEnabled = true;
 
