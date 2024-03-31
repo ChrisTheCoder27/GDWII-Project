@@ -65,6 +65,9 @@ public class StoreMenu : MonoBehaviour
             rifleButton.interactable = false;
             purchaseFailedText.SetActive(false);
             rifleButton.GetComponentInChildren<TMP_Text>().text = "Purchased!";
+
+            // Plays a purchase sound effect
+            rifleButton.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -83,6 +86,8 @@ public class StoreMenu : MonoBehaviour
             shotgunButton.interactable = false;
             purchaseFailedText.SetActive(false);
             shotgunButton.GetComponentInChildren<TMP_Text>().text = "Purchased!";
+
+            shotgunButton.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -101,6 +106,8 @@ public class StoreMenu : MonoBehaviour
             sniperButton.interactable = false;
             purchaseFailedText.SetActive(false);
             sniperButton.GetComponentInChildren<TMP_Text>().text = "Purchased!";
+
+            sniperButton.GetComponent<AudioSource>().Play();
         }
     }
 
