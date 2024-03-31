@@ -221,7 +221,7 @@ public class UIElements : MonoBehaviour
         {
             if (health > 0)
             {
-                health -= maxHealth / 10;
+                health -= maxHealth / 5;
                 healthBar.SetHealth(health);
             }
         }
