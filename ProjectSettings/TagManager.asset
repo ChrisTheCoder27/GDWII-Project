@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - EnemyBullet
   - Medkit
+  - Boss
+  - BossBullet
   layers:
   - Default
   - TransparentFX

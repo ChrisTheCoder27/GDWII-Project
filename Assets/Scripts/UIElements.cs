@@ -202,6 +202,14 @@ public class UIElements : MonoBehaviour
                 healthBar.SetHealth(health);
             }
         }
+        if (collision.gameObject.CompareTag("BossBullet"))
+        {
+            if (health > 0)
+            {
+                health -= maxHealth / 20;
+                healthBar.SetHealth(health);
+            }
+        }
 
         // Checks if the player reaches the end of a level
         if (collision.gameObject.CompareTag("Finish"))
@@ -218,6 +226,14 @@ public class UIElements : MonoBehaviour
     {
         // Checks if the player collided with an enemy
         if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (health > 0)
+            {
+                health -= maxHealth / 5;
+                healthBar.SetHealth(health);
+            }
+        }
+        if (collision.gameObject.CompareTag("Boss"))
         {
             if (health > 0)
             {

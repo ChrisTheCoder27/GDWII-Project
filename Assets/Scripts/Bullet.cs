@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss")
         {
             other.gameObject.GetComponent<EnemyController>().health -= damage;
             Destroy(gameObject);
