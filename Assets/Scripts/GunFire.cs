@@ -13,7 +13,6 @@ public class GunFire : MonoBehaviour
     public GameObject bulletSniperPrefab;
     public GameObject rifleRoundsPrefab;
     public GameObject shotgunRoundPrefab;
-    private StoreMenu StoreMenu;
 
     [SerializeField] UIElements uiElements;
 
