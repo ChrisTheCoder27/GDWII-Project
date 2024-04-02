@@ -138,6 +138,7 @@ public class GunFire : MonoBehaviour
         {
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
         }
+        pistol.GetComponent<AudioSource>().Play();
     }
 
     void ShootSniper()
@@ -151,6 +152,7 @@ public class GunFire : MonoBehaviour
         {
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
         }
+        sniper.GetComponent<AudioSource>().Play();
     }
 
     void ShootRifle()
@@ -164,6 +166,7 @@ public class GunFire : MonoBehaviour
         {
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
         }
+        assaultRifle.GetComponent<AudioSource>().Play();
     }
 
     void ShotgunBlast()
@@ -177,6 +180,7 @@ public class GunFire : MonoBehaviour
         {
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
         }
+        shotgun.GetComponent<AudioSource>().Play();
     }
 
     void SwitchToSniper()
