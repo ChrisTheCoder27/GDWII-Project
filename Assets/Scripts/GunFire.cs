@@ -22,6 +22,8 @@ public class GunFire : MonoBehaviour
     [SerializeField] GameObject shotgun;
     [SerializeField] GameObject sniper;
 
+    [SerializeField] float bulletSpeed;
+
     [SerializeField] AudioClip emptyGun;
 
     bool pistolMode;

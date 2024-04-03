@@ -22567,7 +22567,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1b82c970a13b6aa4983a032b1eef4020, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22932,6 +22932,7 @@ MonoBehaviour:
   assaultRifle: {fileID: 259940599}
   shotgun: {fileID: 925961341}
   sniper: {fileID: 1225757371}
+  bulletSpeed: 28
   emptyGun: {fileID: 8300000, guid: bbd76283603ff814487230e56d1aded6, type: 3}
 --- !u!114 &1407512135
 MonoBehaviour:
