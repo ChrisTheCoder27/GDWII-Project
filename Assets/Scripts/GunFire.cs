@@ -75,7 +75,6 @@ public class GunFire : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Time.time);
         if (!PauseMenu.gameIsPaused)
         {
             // The number keys at the top of the keyboard switch between the weapons
@@ -109,7 +108,7 @@ public class GunFire : MonoBehaviour
                 {
                     ShootPistol();
                     lastAttack = Time.time;
-                    uiElements.currentPistolAmmo--;
+                    uiElements.PistolAmmo--;
                 }
                 else
                 {
@@ -123,7 +122,7 @@ public class GunFire : MonoBehaviour
                 {
                     ShootSniper();
                     lastAttack = Time.time;
-                    uiElements.currentSniperAmmo--;
+                    uiElements.SniperAmmo--;
                 }
                 else
                 {
@@ -137,7 +136,7 @@ public class GunFire : MonoBehaviour
                 {
                     ShootRifle();
                     lastAttack = Time.time;
-                    uiElements.currentRifleAmmo--;
+                    uiElements.RifleAmmo--;
                 }
                 else
                 {
@@ -151,16 +150,12 @@ public class GunFire : MonoBehaviour
                 {
                     ShotgunBlast();
                     lastAttack = Time.time;
-                    uiElements.currentShotgunAmmo--;
+                    uiElements.ShotgunAmmo--;
                 }
                 else
                 {
                     AudioSource.PlayClipAtPoint(emptyGun, transform.position);
                 }
-            }
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Reload();
             }
         }
     }

@@ -21,10 +21,10 @@ public class UIElements : MonoBehaviour
 
     // Ammo variables
     private int maxAmmo = 16;
-    public int currentPistolAmmo;
-    public int currentRifleAmmo;
-    public int currentShotgunAmmo;
-    public int currentSniperAmmo;
+    private int currentPistolAmmo;
+    private int currentRifleAmmo;
+    private int currentShotgunAmmo;
+    private int currentSniperAmmo;
 
     private int money = 0;
 
@@ -42,6 +42,10 @@ public class UIElements : MonoBehaviour
         {
             return currentPistolAmmo;
         }
+        set
+        {
+            currentPistolAmmo = value;
+        }
     }
 
     public int RifleAmmo
@@ -49,6 +53,10 @@ public class UIElements : MonoBehaviour
         get
         {
             return currentRifleAmmo;
+        }
+        set
+        {
+            currentRifleAmmo = value;
         }
     }
 
@@ -58,6 +66,10 @@ public class UIElements : MonoBehaviour
         {
             return currentShotgunAmmo;
         }
+        set
+        {
+            currentShotgunAmmo = value;
+        }
     }
 
     public int SniperAmmo
@@ -65,6 +77,10 @@ public class UIElements : MonoBehaviour
         get
         {
             return currentSniperAmmo;
+        }
+        set
+        {
+            currentSniperAmmo = value;
         }
     }
 
