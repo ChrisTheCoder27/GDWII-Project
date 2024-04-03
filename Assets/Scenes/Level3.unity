@@ -3523,6 +3523,8 @@ MonoBehaviour:
   moneyText: {fileID: 882163150}
   canvasUI: {fileID: 585283105}
   storeMenu: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  storeMusic: {fileID: 0}
 --- !u!61 &1256501757
 BoxCollider2D:
   m_ObjectHideFlags: 0
