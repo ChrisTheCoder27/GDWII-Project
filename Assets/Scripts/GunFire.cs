@@ -77,6 +77,10 @@ public class GunFire : MonoBehaviour
     {
         if (!PauseMenu.gameIsPaused)
         {
+            if (uiElements.isReloading)
+            {
+                return;
+            }
             // The number keys at the top of the keyboard switch between the weapons
             if (Input.GetKeyDown(KeyCode.Alpha4) && StoreMenu.sniperOwned)
             {

@@ -33,8 +33,10 @@ public class UIElements : MonoBehaviour
     private int currentSniperAmmo;
     private float pistolReload = 1f;
     private float rifleReload = 2f;
-    private float shotgunReload = 0.2f;
+    private float shotgunReload = 0.75f;
     private float sniperReload = 4f;
+    
+    public bool isReloading;
 
     private int money = 0;
 
@@ -145,26 +147,34 @@ public class UIElements : MonoBehaviour
     {
         if (gunFire.PistolMode)
         {
+            isReloading = true;
             yield return new WaitForSeconds(pistolReload);
             currentPistolAmmo = maxPistolAmmo;
+            isReloading = false;
         }
         else if (gunFire.RifleMode)
         {
+            isReloading = true;
             yield return new WaitForSeconds(rifleReload);
             currentRifleAmmo = maxRifleAmmo;
+            isReloading = false;
         }
         else if (gunFire.ShotgunMode)
         {
-            yield return new WaitForSeconds(shotgunReload);
             for (int i = currentShotgunAmmo; i < maxShotgunAmmo; i++)
             {
+                yield return new WaitForSeconds(shotgunReload);
+                isReloading = true;
                 currentShotgunAmmo++;
+                isReloading = false;
             }
         }
         else if (gunFire.SniperMode)
         {
+            isReloading = true;
             yield return new WaitForSeconds(sniperReload);
             currentSniperAmmo = maxSniperAmmo;
+            isReloading = false;
         }
     }
 
