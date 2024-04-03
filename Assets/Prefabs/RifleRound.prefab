@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2143913395717736066}
   - component: {fileID: 7497083492038310656}
   - component: {fileID: 85601279799931117}
-  - component: {fileID: 5140857066408228587}
+  - component: {fileID: 7631821115369048243}
   m_Layer: 0
   m_Name: RifleRound
   m_TagString: Bullet
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45f4d1e904188b48962e8e055561ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   bulletSpeed: 28
   rb: {fileID: 85601279799931117}
   moneyPrefab: {fileID: 3080096546940921114, guid: d5df5c1a16d1afd498b2c49e0d8ef0fb, type: 3}
@@ -132,8 +132,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
---- !u!58 &5140857066408228587
-CircleCollider2D:
+--- !u!70 &7631821115369048243
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,8 +165,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 3.42, y: 1}
+  m_Direction: 1
 --- !u!1 &2196103577311538418
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8640229084294388730}
   - component: {fileID: 5542890626687258939}
-  - component: {fileID: 3081934412330068135}
   m_Layer: 0
   m_Name: Bang
   m_TagString: Untagged
@@ -252,41 +251,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3081934412330068135
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2196103577311538418}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &7295969262813689978
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +261,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2594677679715821736}
   - component: {fileID: 6401129569375284325}
-  - component: {fileID: 1414471669182774284}
   m_Layer: 0
   m_Name: Bang 2
   m_TagString: Untagged
@@ -372,38 +335,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1414471669182774284
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295969262813689978}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0000038146973, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5

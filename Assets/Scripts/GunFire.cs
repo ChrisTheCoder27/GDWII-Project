@@ -22,6 +22,8 @@ public class GunFire : MonoBehaviour
     [SerializeField] GameObject shotgun;
     [SerializeField] GameObject sniper;
 
+    [SerializeField] float bulletSpeed;
+
     [SerializeField] AudioClip emptyGun;
 
     bool pistolMode;
@@ -32,6 +34,7 @@ public class GunFire : MonoBehaviour
     bool rifleModeEnabled;
     bool shotgunMode;
     bool shotgunModeEnabled;
+    private float lastAttack;
 
     public bool PistolMode
     {
@@ -72,34 +75,41 @@ public class GunFire : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(Time.time);
         if (!PauseMenu.gameIsPaused)
         {
             // The number keys at the top of the keyboard switch between the weapons
             if (Input.GetKeyDown(KeyCode.Alpha4) && StoreMenu.sniperOwned)
             {
                 SwitchToSniper();
+                lastAttack = Time.time;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3) && StoreMenu.rifleOwned)
             {
                 SwitchToRifle();
+                lastAttack = Time.time;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2) && StoreMenu.shotgunOwned)
             {
                 SwitchToShotgun();
+                lastAttack = Time.time;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SwitchToPistol();
+                lastAttack = Time.time;
             }
 
-            if (Input.GetButtonDown("Fire1") && pistolMode && pistolModeEnabled)
+            if (Input.GetButtonDown("Fire1") && pistolMode && pistolModeEnabled && lastAttack <= Time.time - 0.5) 
             {
                 if (uiElements.PistolAmmo > 0)
                 {
                     ShootPistol();
+                    lastAttack = Time.time;
+                    uiElements.currentPistolAmmo--;
                 }
                 else
                 {
@@ -107,11 +117,13 @@ public class GunFire : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled)
+            if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled && lastAttack <= Time.time - 1.5)
             {
                 if (uiElements.SniperAmmo > 0)
                 {
                     ShootSniper();
+                    lastAttack = Time.time;
+                    uiElements.currentSniperAmmo--;
                 }
                 else
                 {
@@ -124,6 +136,8 @@ public class GunFire : MonoBehaviour
                 if (uiElements.RifleAmmo > 0)
                 {
                     ShootRifle();
+                    lastAttack = Time.time;
+                    uiElements.currentRifleAmmo--;
                 }
                 else
                 {
@@ -131,16 +145,22 @@ public class GunFire : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled)
+            if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled && lastAttack <= Time.time - 1)
             {
                 if (uiElements.ShotgunAmmo > 0)
                 {
                     ShotgunBlast();
+                    lastAttack = Time.time;
+                    uiElements.currentShotgunAmmo--;
                 }
                 else
                 {
                     AudioSource.PlayClipAtPoint(emptyGun, transform.position);
                 }
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload();
             }
         }
     }
