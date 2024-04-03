@@ -150,11 +150,11 @@ public class GunFire : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, pistolFirePoint.position, pistolFirePoint.rotation);
         if (player.transform.localScale.x > 0)
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0.0f);
         }
         else
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0.0f);
         }
         pistol.GetComponent<AudioSource>().Play();
     }
@@ -164,11 +164,11 @@ public class GunFire : MonoBehaviour
         GameObject bullet = Instantiate(bulletSniperPrefab, sniperFirePoint.position, sniperFirePoint.rotation);
         if (player.transform.localScale.x > 0)
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0.0f);
         }
         else
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0.0f);
         }
         sniper.GetComponent<AudioSource>().Play();
     }
@@ -178,11 +178,11 @@ public class GunFire : MonoBehaviour
         GameObject bullet = Instantiate(rifleRoundsPrefab, rifleFirePoint.position, rifleFirePoint.rotation);
         if (player.transform.localScale.x > 0)
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0.0f);
         }
         else
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0.0f);
         }
         assaultRifle.GetComponent<AudioSource>().Play();
     }
@@ -192,11 +192,11 @@ public class GunFire : MonoBehaviour
         GameObject bullet = Instantiate(shotgunRoundPrefab, shotgunFirePoint.position, shotgunFirePoint.rotation);
         if (player.transform.localScale.x > 0)
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0.0f);
         }
         else
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0.0f);
         }
         shotgun.GetComponent<AudioSource>().Play();
     }
