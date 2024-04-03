@@ -21,10 +21,10 @@ public class UIElements : MonoBehaviour
 
     // Ammo variables
     private int maxAmmo = 16;
-    private int currentPistolAmmo;
-    private int currentRifleAmmo;
-    private int currentShotgunAmmo;
-    private int currentSniperAmmo;
+    public int currentPistolAmmo;
+    public int currentRifleAmmo;
+    public int currentShotgunAmmo;
+    public int currentSniperAmmo;
 
     private int money = 0;
 
@@ -96,13 +96,6 @@ public class UIElements : MonoBehaviour
                 maxAmmo = 16;
                 ammoText.text = $"Ammo: {currentPistolAmmo}";
 
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (currentPistolAmmo > 0)
-                    {
-                        currentPistolAmmo--;
-                    }
-                }
 
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -114,14 +107,6 @@ public class UIElements : MonoBehaviour
                 maxAmmo = 30;
                 ammoText.text = $"Ammo: {currentRifleAmmo}";
 
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (currentRifleAmmo > 0)
-                    {
-                        currentRifleAmmo--;
-                    }
-                }
-
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     currentRifleAmmo = maxAmmo;
@@ -132,13 +117,6 @@ public class UIElements : MonoBehaviour
                 maxAmmo = 12;
                 ammoText.text = $"Ammo: {currentShotgunAmmo}";
 
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (currentShotgunAmmo > 0)
-                    {
-                        currentShotgunAmmo--;
-                    }
-                }
 
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -149,14 +127,6 @@ public class UIElements : MonoBehaviour
             {
                 maxAmmo = 8;
                 ammoText.text = $"Ammo: {currentSniperAmmo}";
-
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (currentSniperAmmo > 0)
-                    {
-                        currentSniperAmmo--;
-                    }
-                }
 
                 if (Input.GetKeyDown(KeyCode.R))
                 {
