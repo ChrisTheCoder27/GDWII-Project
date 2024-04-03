@@ -20,15 +20,14 @@ public class UIElements : MonoBehaviour
     private int health;
 
     // Ammo variables
-    private int maxAmmo = 16;
     private int maxPistolAmmo = 16;
     private int maxRifleAmmo = 30;
     private int maxShotgunAmmo = 12;
     private int maxSniperAmmo = 8;
-    public int currentPistolAmmo;
-    public int currentRifleAmmo;
-    public int currentShotgunAmmo;
-    public int currentSniperAmmo;
+    private int currentPistolAmmo;
+    private int currentRifleAmmo;
+    private int currentShotgunAmmo;
+    private int currentSniperAmmo;
 
     private int money = 0;
 
@@ -147,7 +146,7 @@ public class UIElements : MonoBehaviour
         }
         else if (gunFire.ShotgunMode)
         {
-            currentShotgunAmmo = maxSniperAmmo;
+            currentShotgunAmmo = maxShotgunAmmo;
         }
         else if (gunFire.SniperMode)
         {
