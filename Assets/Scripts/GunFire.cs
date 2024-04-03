@@ -77,11 +77,15 @@ public class GunFire : MonoBehaviour
     {
         if (!PauseMenu.gameIsPaused)
         {
+            if (uiElements.isReloading)
+            {
+                return;
+            }
             // The number keys at the top of the keyboard switch between the weapons
             if (Input.GetKeyDown(KeyCode.Alpha4) && StoreMenu.sniperOwned)
             {
                 SwitchToSniper();
-                lastAttack = Time.time;
+                lastAttack = Time.time - 1.5f;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3) && StoreMenu.rifleOwned)
@@ -93,7 +97,7 @@ public class GunFire : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha2) && StoreMenu.shotgunOwned)
             {
                 SwitchToShotgun();
-                lastAttack = Time.time;
+                lastAttack = Time.time - 1;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
