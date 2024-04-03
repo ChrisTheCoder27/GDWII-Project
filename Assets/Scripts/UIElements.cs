@@ -15,6 +15,9 @@ public class UIElements : MonoBehaviour
     [SerializeField] GameObject canvasUI;
     [SerializeField] GameObject storeMenu;
 
+    [SerializeField] AudioSource backgroundMusic;
+    [SerializeField] AudioSource storeMusic;
+
     // Health variables
     private int maxHealth = 100;
     private int health;
@@ -216,6 +219,9 @@ public class UIElements : MonoBehaviour
             Money.moneyTotal = money;
             canvasUI.SetActive(false);
             storeMenu.SetActive(true);
+
+            backgroundMusic.Stop();
+            storeMusic.Play();
         }
     }
 
