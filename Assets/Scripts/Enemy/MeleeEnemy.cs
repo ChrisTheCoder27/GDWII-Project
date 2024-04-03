@@ -13,6 +13,7 @@ public class MeleeEnemy : MonoBehaviour
     private float setSpeed;
 
     private bool playerNear;
+    private bool playingSound;
 
     void Start()
     {
@@ -63,10 +64,18 @@ public class MeleeEnemy : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             transform.localScale = scale;
+
+            if (!playingSound)
+            {
+                playingSound = true;
+                GetComponent<AudioSource>().Play();
+            }
         }
         else
         {
             playerNear = false;
+            playingSound = false;
+            GetComponent<AudioSource>().Stop();
         }
     }
 }

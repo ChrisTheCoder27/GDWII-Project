@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    [SerializeField] GameObject bulletPrefab; 
+    [SerializeField] GameObject bulletPrefab;
+
+    [SerializeField] AudioClip gunShot;
     
     GameObject player;
 
@@ -35,6 +37,7 @@ public class EnemyShooting : MonoBehaviour
                         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
                     }
                     Destroy(bullet, 5);
+                    AudioSource.PlayClipAtPoint(gunShot, player.transform.position);
                 }
                 lastAttack = Time.time;
             }

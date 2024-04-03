@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4723591930280872213, guid: 7fac9781956c9c74c82673369d6f5dc8, type: 3}
+  gunShot: {fileID: 8300000, guid: bbd115a2da486dc49b7f274d9513bf99, type: 3}
   isRange: 1
 --- !u!50 &8748022259811520840
 Rigidbody2D:
