@@ -24502,6 +24502,7 @@ MonoBehaviour:
   assaultRifle: {fileID: 259940599}
   shotgun: {fileID: 925961341}
   sniper: {fileID: 1225757371}
+  emptyGun: {fileID: 8300000, guid: bbd76283603ff814487230e56d1aded6, type: 3}
 --- !u!114 &1407512135
 MonoBehaviour:
   m_ObjectHideFlags: 0

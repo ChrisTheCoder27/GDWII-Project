@@ -22,6 +22,8 @@ public class GunFire : MonoBehaviour
     [SerializeField] GameObject shotgun;
     [SerializeField] GameObject sniper;
 
+    [SerializeField] AudioClip emptyGun;
+
     bool pistolMode;
     bool pistolModeEnabled;
     bool sniperMode;
@@ -99,6 +101,10 @@ public class GunFire : MonoBehaviour
                 {
                     ShootPistol();
                 }
+                else
+                {
+                    AudioSource.PlayClipAtPoint(emptyGun, transform.position);
+                }
             }
 
             if (Input.GetButtonDown("Fire1") && sniperMode && sniperModeEnabled)
@@ -106,6 +112,10 @@ public class GunFire : MonoBehaviour
                 if (uiElements.SniperAmmo > 0)
                 {
                     ShootSniper();
+                }
+                else
+                {
+                    AudioSource.PlayClipAtPoint(emptyGun, transform.position);
                 }
             }
 
@@ -115,6 +125,10 @@ public class GunFire : MonoBehaviour
                 {
                     ShootRifle();
                 }
+                else
+                {
+                    AudioSource.PlayClipAtPoint(emptyGun, transform.position);
+                }
             }
 
             if (Input.GetButtonDown("Fire1") && shotgunMode && shotgunModeEnabled)
@@ -122,6 +136,10 @@ public class GunFire : MonoBehaviour
                 if (uiElements.ShotgunAmmo > 0)
                 {
                     ShotgunBlast();
+                }
+                else
+                {
+                    AudioSource.PlayClipAtPoint(emptyGun, transform.position);
                 }
             }
         }
