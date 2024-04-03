@@ -46,6 +46,10 @@ public class UIElements : MonoBehaviour
         {
             return currentPistolAmmo;
         }
+        set
+        {
+            currentPistolAmmo = value;
+        }
     }
 
     public int RifleAmmo
@@ -53,6 +57,10 @@ public class UIElements : MonoBehaviour
         get
         {
             return currentRifleAmmo;
+        }
+        set
+        {
+            currentRifleAmmo = value;
         }
     }
 
@@ -62,6 +70,10 @@ public class UIElements : MonoBehaviour
         {
             return currentShotgunAmmo;
         }
+        set
+        {
+            currentShotgunAmmo = value;
+        }
     }
 
     public int SniperAmmo
@@ -69,6 +81,10 @@ public class UIElements : MonoBehaviour
         get
         {
             return currentSniperAmmo;
+        }
+        set
+        {
+            currentSniperAmmo = value;
         }
     }
 
