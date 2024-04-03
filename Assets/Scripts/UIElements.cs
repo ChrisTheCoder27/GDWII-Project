@@ -20,11 +20,14 @@ public class UIElements : MonoBehaviour
     private int health;
 
     // Ammo variables
-    private int maxAmmo = 16;
-    public int currentPistolAmmo;
-    public int currentRifleAmmo;
-    public int currentShotgunAmmo;
-    public int currentSniperAmmo;
+    private int maxPistolAmmo = 16;
+    private int maxRifleAmmo = 30;
+    private int maxShotgunAmmo = 12;
+    private int maxSniperAmmo = 8;
+    private int currentPistolAmmo;
+    private int currentRifleAmmo;
+    private int currentShotgunAmmo;
+    private int currentSniperAmmo;
 
     private int money = 0;
 
@@ -42,6 +45,10 @@ public class UIElements : MonoBehaviour
         {
             return currentPistolAmmo;
         }
+        set
+        {
+            currentPistolAmmo = value;
+        }
     }
 
     public int RifleAmmo
@@ -49,6 +56,10 @@ public class UIElements : MonoBehaviour
         get
         {
             return currentRifleAmmo;
+        }
+        set
+        {
+            currentRifleAmmo = value;
         }
     }
 
@@ -58,6 +69,10 @@ public class UIElements : MonoBehaviour
         {
             return currentShotgunAmmo;
         }
+        set
+        {
+            currentShotgunAmmo = value;
+        }
     }
 
     public int SniperAmmo
@@ -66,6 +81,10 @@ public class UIElements : MonoBehaviour
         {
             return currentSniperAmmo;
         }
+        set
+        {
+            currentSniperAmmo = value;
+        }
     }
 
     void Start()
@@ -73,7 +92,7 @@ public class UIElements : MonoBehaviour
         // Assigning health, ammo, and money variables at start
         health = maxHealth;
         healthBar.SetHealth(maxHealth);
-        currentPistolAmmo = maxAmmo;
+        currentPistolAmmo = 16;
         currentRifleAmmo = 30;
         currentShotgunAmmo = 12;
         currentSniperAmmo = 8;
@@ -93,49 +112,46 @@ public class UIElements : MonoBehaviour
 
             if (gunFire.PistolMode)
             {
-                maxAmmo = 16;
                 ammoText.text = $"Ammo: {currentPistolAmmo}";
-
-
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    currentPistolAmmo = maxAmmo;
-                }
             }
             else if (gunFire.RifleMode)
             {
-                maxAmmo = 30;
                 ammoText.text = $"Ammo: {currentRifleAmmo}";
-
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    currentRifleAmmo = maxAmmo;
-                }
             }
             else if (gunFire.ShotgunMode)
             {
-                maxAmmo = 12;
                 ammoText.text = $"Ammo: {currentShotgunAmmo}";
-
-
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    currentShotgunAmmo = maxAmmo;
-                }
             }
             else if (gunFire.SniperMode)
             {
-                maxAmmo = 8;
                 ammoText.text = $"Ammo: {currentSniperAmmo}";
-
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    currentSniperAmmo = maxAmmo;
-                }
             }
 
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload();
+            }
         }
+    }
 
+    void Reload()
+    {
+        if(gunFire.PistolMode)
+        {
+            currentPistolAmmo = maxPistolAmmo;
+        }
+        else if (gunFire.RifleMode)
+        {
+            currentRifleAmmo = maxRifleAmmo;
+        }
+        else if (gunFire.ShotgunMode)
+        {
+            currentShotgunAmmo = maxShotgunAmmo;
+        }
+        else if (gunFire.SniperMode)
+        {
+            currentSniperAmmo = maxSniperAmmo;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
