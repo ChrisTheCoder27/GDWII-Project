@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45f4d1e904188b48962e8e055561ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   bulletSpeed: 28
   rb: {fileID: 85601279799931117}
   moneyPrefab: {fileID: 3080096546940921114, guid: d5df5c1a16d1afd498b2c49e0d8ef0fb, type: 3}
