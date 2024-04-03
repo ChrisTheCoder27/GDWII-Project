@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class StoreMenu : MonoBehaviour
 {
-    public static bool rifleOwned;
-    public static bool shotgunOwned;
-    public static bool sniperOwned;
+    public static bool rifleOwned = true;
+    public static bool shotgunOwned = true;
+    public static bool sniperOwned = true;
 
     [SerializeField] Button rifleButton;
     [SerializeField] Button shotgunButton;
