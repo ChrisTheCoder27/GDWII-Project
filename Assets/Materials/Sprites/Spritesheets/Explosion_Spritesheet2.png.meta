@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b91496124914a9b439d119b1b14a2ddf
+guid: 5442bbe212df65d419b73b7d6687c956
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,9 +116,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 429
-        height: 994
+        height: 481
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,9 +137,9 @@ TextureImporter:
         x: 429
         y: 0
         width: 429
-        height: 994
+        height: 495
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: Explosion_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 858
+        x: 859
         y: 0
         width: 429
-        height: 994
+        height: 495
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,9 +179,9 @@ TextureImporter:
         x: 1287
         y: 0
         width: 429
-        height: 994
+        height: 495
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,9 +200,9 @@ TextureImporter:
         x: 1716
         y: 0
         width: 429
-        height: 994
+        height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

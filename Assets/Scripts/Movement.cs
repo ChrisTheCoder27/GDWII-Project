@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     [SerializeField] UIElements uiElements;
+    [SerializeField] GameObject explosion;
+    [SerializeField] AudioClip explodeSound;
 
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 8f;
     private bool isFacingRight = true;
+
+    private bool animComplete;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -64,6 +68,26 @@ public class Movement : MonoBehaviour
 
     private void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PauseMenu.gameIsPaused = true;
+        rb.velocity = Vector3.zero;
+
+        explosion.SetActive(true);
+        AudioSource.PlayClipAtPoint(explodeSound, transform.position);
+        if (!animComplete)
+        {
+            StartCoroutine(ExplodeTime());
+        }
+
+        if (animComplete)
+        {
+            PauseMenu.gameIsPaused = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    IEnumerator ExplodeTime()
+    {
+        yield return new WaitForSeconds(0.7f);
+        animComplete = true;
     }
 }

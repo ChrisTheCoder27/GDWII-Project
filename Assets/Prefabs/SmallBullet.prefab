@@ -103,6 +103,7 @@ MonoBehaviour:
   bulletSpeed: 28
   rb: {fileID: -9200150262013705811}
   moneyPrefab: {fileID: 3080096546940921114, guid: d5df5c1a16d1afd498b2c49e0d8ef0fb, type: 3}
+  explosion: {fileID: -7762511622601156743, guid: 49d21138a8081ba4e8bcf4462128bfbf, type: 3}
 --- !u!50 &-9200150262013705811
 Rigidbody2D:
   serializedVersion: 4
