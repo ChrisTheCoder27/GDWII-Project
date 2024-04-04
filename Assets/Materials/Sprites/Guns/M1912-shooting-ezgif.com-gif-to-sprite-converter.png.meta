@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: 9adbe9e73f61ef644a0cf46a28a17a01
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1665
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2833405831dec8349a6cddbc4cdd5be3
+      internalID: 1760233960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1665
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cb9f3a640b78849bf5c6f2f1ef3b24
+      internalID: 1821345989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1665
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f852eeb5983b84e8fa826fb6d4547f
+      internalID: -1922593337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1665
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3675853025e31d418fc2575ee149922
+      internalID: -301362108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1110
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68da4f874dbb21d4a98b51176f76b80a
+      internalID: 1722631902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1110
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56dc6401752af14e921282847b8960e
+      internalID: -667284977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1110
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c31bce68402874c9a17f29daee257b
+      internalID: 565235571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_7
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1110
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baca8349fae08a4bb30e61b72110f41
+      internalID: -1899382831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 555
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb29987be1ef6f4b8e7c3f70f0e206f
+      internalID: -155942589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 555
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0987e1f2cc914ca4e9cbd7d1f02e3886
+      internalID: -977121851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 555
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584cf094ba3ed1547961f41d22e872bf
+      internalID: -852603821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_11
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 555
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526bf3e3da3371449910b9dee9faa302
+      internalID: 1853096223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04742669cae7d24fa6a0b3ad86904c8
+      internalID: 1141345220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff9c174b89a6ba48ab7f98a76a2f4bf
+      internalID: 589006988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_14
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3071576e9064843ac8687c55ce548f
+      internalID: 1496134101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M1912-shooting-ezgif.com-gif-to-sprite-converter_15
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 960
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c6b2f5ded2db14790ad1ea8de8a08f
+      internalID: -2028601952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_0: 1760233960
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_1: 1821345989
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_10: -852603821
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_11: 1853096223
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_12: 1141345220
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_13: 589006988
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_14: 1496134101
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_15: -2028601952
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_2: -1922593337
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_3: -301362108
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_4: 1722631902
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_5: -667284977
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_6: 565235571
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_7: -1899382831
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_8: -155942589
+      M1912-shooting-ezgif.com-gif-to-sprite-converter_9: -977121851
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06fb3a3c27f92b4a808c591dcb22787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1407512131}
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &89404052
 GameObject:
@@ -844,6 +844,8 @@ GameObject:
   - component: {fileID: 259940601}
   - component: {fileID: 259940600}
   - component: {fileID: 259940602}
+  - component: {fileID: 259940604}
+  - component: {fileID: 259940603}
   m_Layer: 0
   m_Name: AssaultRifle
   m_TagString: Untagged
@@ -891,10 +893,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 9be19b67b62c7604b8dbefc53c478f4f, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1652122066, guid: 7cdfd10d9f5b106438ff9a9a02986e66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 10.95, y: 4.75}
@@ -1014,6 +1016,43 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &259940603
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259940599}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 554eeee85c120594db99d00031e199ed, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 554eeee85c120594db99d00031e199ed, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &259940604
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259940599}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fb28a7a0554a394594a14255e415a6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &267405583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1461,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06fb3a3c27f92b4a808c591dcb22787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1407512131}
   offset: {x: 0, y: 0, z: -10}
 --- !u!4 &533960009 stripped
 Transform:
@@ -2193,7 +2232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: a4bd02ced3b783d479bfc4e4ee3cfa1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22470,9 +22509,9 @@ Transform:
   m_GameObject: {fileID: 1178849624}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -2.51, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.5, y: -2.51, z: 0}
+  m_LocalScale: {x: 0.12578015, y: 0.12578015, z: 0.12578015}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1407512138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22591,7 +22630,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 73b79c9c3501fd14ba7b53c274f42613, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24332,6 +24371,8 @@ GameObject:
   - component: {fileID: 2073825711}
   - component: {fileID: 2073825710}
   - component: {fileID: 2073825712}
+  - component: {fileID: 2073825714}
+  - component: {fileID: 2073825713}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -24379,8 +24420,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: fc91f4e75bd162f468662e0a66b86ca5, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1760233960, guid: 9adbe9e73f61ef644a0cf46a28a17a01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24400,9 +24441,9 @@ Transform:
   m_GameObject: {fileID: 2073825709}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.43, y: -4.91, z: 0}
-  m_LocalScale: {x: 0.91016555, y: 1.1563398, z: 0.19776079}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 1.13, y: -0.56, z: 0}
+  m_LocalScale: {x: 0.37, y: 0.4700746, z: 0.080393605}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1407512138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24502,6 +24543,43 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &2073825713
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073825709}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: aadada197b2d1e64bbf6c8d21ece68fb, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: aadada197b2d1e64bbf6c8d21ece68fb, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &2073825714
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073825709}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1c70d418a9f23a419ead3755274ba50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &115883451684938162
 PrefabInstance:
   m_ObjectHideFlags: 0

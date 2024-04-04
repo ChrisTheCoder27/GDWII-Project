@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GunFire : MonoBehaviour
 {
@@ -35,7 +36,33 @@ public class GunFire : MonoBehaviour
     bool shotgunMode;
     bool shotgunModeEnabled;
     private float lastAttack;
+    private Vector2 worldPosition;
+    private Vector2 direction;
 
+    void PistolRotate()
+    {
+        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        direction = (worldPosition - (Vector2)pistolFirePoint.transform.position).normalized;
+        pistolFirePoint.transform.right = direction;
+    }
+    void RifleRotate()
+    {
+        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        direction = (worldPosition - (Vector2)rifleFirePoint.transform.position).normalized;
+        rifleFirePoint.transform.right = direction;
+    }
+    void ShotgunRotate()
+    {
+        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        direction = (worldPosition - (Vector2)shotgunFirePoint.transform.position).normalized;
+        shotgunFirePoint.transform.right = direction;
+    }
+    void SniperRotate()
+    {
+        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        direction = (worldPosition - (Vector2)sniperFirePoint.transform.position).normalized;
+        sniperFirePoint.transform.right = direction;
+    }
     public bool PistolMode
     {
         get
@@ -75,6 +102,11 @@ public class GunFire : MonoBehaviour
 
     void Update()
     {
+        PistolRotate();
+        RifleRotate();
+        ShotgunRotate();
+        SniperRotate();
+
         if (!PauseMenu.gameIsPaused)
         {
             if (uiElements.isReloading)
@@ -168,56 +200,28 @@ public class GunFire : MonoBehaviour
     void ShootPistol()
     {
         GameObject bullet = Instantiate(bulletPrefab, pistolFirePoint.position, pistolFirePoint.rotation);
-        if (player.transform.localScale.x > 0)
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
-        }
-        else
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
-        }
+        
         pistol.GetComponent<AudioSource>().Play();
     }
 
     void ShootSniper()
     {
         GameObject bullet = Instantiate(bulletSniperPrefab, sniperFirePoint.position, sniperFirePoint.rotation);
-        if (player.transform.localScale.x > 0)
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
-        }
-        else
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
-        }
+        
         sniper.GetComponent<AudioSource>().Play();
     }
 
     void ShootRifle()
     {
         GameObject bullet = Instantiate(rifleRoundsPrefab, rifleFirePoint.position, rifleFirePoint.rotation);
-        if (player.transform.localScale.x > 0)
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
-        }
-        else
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
-        }
+        
         assaultRifle.GetComponent<AudioSource>().Play();
     }
 
     void ShotgunBlast()
     {
         GameObject bullet = Instantiate(shotgunRoundPrefab, shotgunFirePoint.position, shotgunFirePoint.rotation);
-        if (player.transform.localScale.x > 0)
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(28, 0.0f);
-        }
-        else
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-28, 0.0f);
-        }
+        
         shotgun.GetComponent<AudioSource>().Play();
     }
 
