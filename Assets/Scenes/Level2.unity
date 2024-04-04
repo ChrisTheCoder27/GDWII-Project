@@ -54881,6 +54881,10 @@ PrefabInstance:
       propertyPath: explodeSound
       value: 
       objectReference: {fileID: 8300000, guid: 7cad120525a99134583f96ced3f213cb, type: 3}
+    - target: {fileID: 1444394477313664353, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1604249129649453393, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
       propertyPath: m_Name
       value: Player
