@@ -1723,6 +1723,10 @@ PrefabInstance:
       propertyPath: explodeSound
       value: 
       objectReference: {fileID: 8300000, guid: 7cad120525a99134583f96ced3f213cb, type: 3}
+    - target: {fileID: 1444394477313664353, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1604249129649453393, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1759,6 +1763,10 @@ PrefabInstance:
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 1788085176}
+    - target: {fileID: 4210837784322895687, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6958408775544922471, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
@@ -1798,6 +1806,14 @@ PrefabInstance:
     - target: {fileID: 6958408775544922471, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518897000580810457, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413813049016643972, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
