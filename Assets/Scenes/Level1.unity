@@ -1719,6 +1719,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1398629957141092723, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
+      propertyPath: explodeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cad120525a99134583f96ced3f213cb, type: 3}
     - target: {fileID: 1604249129649453393, guid: eab77502a3e2c73459aebf28e7a28433, type: 3}
       propertyPath: m_Name
       value: Player

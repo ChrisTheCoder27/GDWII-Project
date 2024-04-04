@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] UIElements uiElements;
     [SerializeField] GameObject explosion;
+    [SerializeField] AudioClip explodeSound;
 
     private float horizontal;
     private float speed = 8f;
@@ -71,6 +72,7 @@ public class Movement : MonoBehaviour
         rb.velocity = Vector3.zero;
 
         explosion.SetActive(true);
+        AudioSource.PlayClipAtPoint(explodeSound, transform.position);
         if (!animComplete)
         {
             StartCoroutine(ExplodeTime());
