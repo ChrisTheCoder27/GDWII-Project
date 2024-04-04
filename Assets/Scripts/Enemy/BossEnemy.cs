@@ -5,8 +5,12 @@ using UnityEngine.UIElements;
 
 public class BossEnemy : MonoBehaviour
 {
+    EnemyController enemyController;
     GameObject player;
+    [SerializeField] SceneLoader sceneLoader;
+
     public float speed;
+
     private float setSpeed;
 
     private bool playerNear;
@@ -18,6 +22,7 @@ public class BossEnemy : MonoBehaviour
 
     private void Awake()
     {
+        enemyController = GetComponent<EnemyController>();
         player = GameObject.FindWithTag("Player");
     }
 
@@ -41,6 +46,11 @@ public class BossEnemy : MonoBehaviour
         else
         {
             playerNear = false;
+        }
+
+        if (enemyController.health <= 0)
+        {
+            sceneLoader.LoadNextScene();
         }
     }
 }
